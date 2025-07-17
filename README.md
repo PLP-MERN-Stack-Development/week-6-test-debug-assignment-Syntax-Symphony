@@ -1,88 +1,110 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19950949&assignment_repo_type=AssignmentRepo)
-# Testing and Debugging MERN Applications
+# Bug Tracker Application
 
-This assignment focuses on implementing comprehensive testing strategies for a MERN stack application, including unit testing, integration testing, and end-to-end testing, along with debugging techniques.
-
-## Assignment Overview
-
-You will:
-1. Set up testing environments for both client and server
-2. Write unit tests for React components and server functions
-3. Implement integration tests for API endpoints
-4. Create end-to-end tests for critical user flows
-5. Apply debugging techniques for common MERN stack issues
+## Overview
+The Bug Tracker application is a full-stack MERN (MongoDB, Express, React, Node.js) project designed to help users report, track, and manage bugs efficiently. This application consists of a backend API for handling bug data and a frontend interface for user interaction.
 
 ## Project Structure
+The project is organized into two main directories: `backend` and `frontend`.
 
 ```
-mern-testing/
-├── client/                 # React front-end
-│   ├── src/                # React source code
-│   │   ├── components/     # React components
-│   │   ├── tests/          # Client-side tests
-│   │   │   ├── unit/       # Unit tests
-│   │   │   └── integration/ # Integration tests
-│   │   └── App.jsx         # Main application component
-│   └── cypress/            # End-to-end tests
-├── server/                 # Express.js back-end
-│   ├── src/                # Server source code
-│   │   ├── controllers/    # Route controllers
-│   │   ├── models/         # Mongoose models
-│   │   ├── routes/         # API routes
-│   │   └── middleware/     # Custom middleware
-│   └── tests/              # Server-side tests
-│       ├── unit/           # Unit tests
-│       └── integration/    # Integration tests
-├── jest.config.js          # Jest configuration
-└── package.json            # Project dependencies
+bug-tracker
+├── backend
+│   ├── src
+│   │   ├── controllers
+│   │   │   └── bugController.js
+│   │   ├── models
+│   │   │   └── Bug.js
+│   │   ├── routes
+│   │   │   └── bugRoutes.js
+│   │   ├── tests
+│   │   │   └── bug.test.js
+│   │   └── app.js
+│   ├── package.json
+│   └── README.md
+├── frontend
+│   ├── src
+│   │   ├── components
+│   │   │   └── BugList.jsx
+│   │   ├── pages
+│   │   │   └── Home.jsx
+│   │   ├── tests
+│   │   │   └── BugList.test.jsx
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── package.json
+│   └── README.md
+└── README.md
 ```
 
-## Getting Started
+## Installation
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week6-Assignment.md` file
-4. Explore the starter code and existing tests
-5. Complete the tasks outlined in the assignment
+### Backend
+1. Navigate to the `backend` directory:
+   ```bash
+   cd backend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Files Included
+### Frontend
+1. Navigate to the `frontend` directory:
+   ```bash
+   cd frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-- `Week6-Assignment.md`: Detailed assignment instructions
-- Starter code for a MERN application with basic test setup:
-  - Sample React components with test files
-  - Express routes with test files
-  - Jest and testing library configurations
-  - Example tests for reference
+## Running the Application
 
-## Requirements
+### Backend
+1. Start the backend server:
+   ```bash
+   npm start
+   ```
+   The server will run on `http://localhost:5000`.
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Basic understanding of testing concepts
+### Frontend
+1. Start the frontend application:
+   ```bash
+   npm run dev
+   ```
+   The application will run on `http://localhost:5173`.
 
-## Testing Tools
+## Testing
 
-- Jest: JavaScript testing framework
-- React Testing Library: Testing utilities for React
-- Supertest: HTTP assertions for API testing
-- Cypress/Playwright: End-to-end testing framework
-- MongoDB Memory Server: In-memory MongoDB for testing
+### Backend
+To run tests for the backend:
+```bash
+cd backend
+npm test
+```
 
-## Submission
+### Frontend
+To run tests for the frontend:
+```bash
+cd frontend
+npm test
+```
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+## Debugging Techniques
+- Use console logs to trace the flow of data and identify issues.
+- Utilize debugging tools in your browser for frontend issues.
+- Use Postman or similar tools to test API endpoints independently.
+- Check for common errors such as CORS issues, incorrect API endpoints, and database connection problems.
+- Use Node.js inspector for backend debugging.
+- Implement React error boundaries for graceful error handling in the UI.
 
-1. Complete all required tests (unit, integration, and end-to-end)
-2. Achieve at least 70% code coverage for unit tests
-3. Document your testing strategy in the README.md
-4. Include screenshots of your test coverage reports
-5. Demonstrate debugging techniques in your code
+## Error Handling
+- Backend: Uses Express middleware for centralized error handling.
+- Frontend: Implements React error boundaries to catch and display UI errors.
 
-## Resources
+## Documentation
+- This README includes setup, running, testing, and debugging instructions.
+- Code is commented for clarity and maintainability.
 
-- [Jest Documentation](https://jestjs.io/docs/getting-started)
-- [React Testing Library Documentation](https://testing-library.com/docs/react-testing-library/intro/)
-- [Supertest Documentation](https://github.com/visionmedia/supertest)
-- [Cypress Documentation](https://docs.cypress.io/)
-- [MongoDB Testing Best Practices](https://www.mongodb.com/blog/post/mongodb-testing-best-practices) 
+## Conclusion
+This Bug Tracker application provides a robust solution for managing bugs, with a clear structure and systematic testing
